@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('animes', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->boolean('state')->default(false);
+            $table->integer('number_of_episodes');
             $table->timestamps();
         });
     }
