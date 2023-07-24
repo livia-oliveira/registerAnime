@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\AnimeController;
+use App\Http\Controllers\AuthorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,3 +26,7 @@ Route::post('/animes', [AnimeController::class, 'store']);
 Route::put('/animes/{id}', [AnimeController::class, 'update']);
 Route::delete('/animes/{id}', [AnimeController::class, 'destroy']);
 
+Route::get('/authors', [AuthorController::class, 'index']);
+Route::post('/authors', [AuthorController::class, 'store']);
+Route::put('/authors/{id}', [AuthorController::class, 'update']);
+Route::delete('/authors/{id}', [AuthorController::class, 'destroy']);
