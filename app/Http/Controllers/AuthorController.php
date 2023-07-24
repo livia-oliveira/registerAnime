@@ -24,7 +24,7 @@ class AuthorController extends Controller
    }
 
    public function store(AuthorRequest $request){
-        $author = $this->author->create($request(all()));
+        $author = $this->author->create($request->all());
 
         if($author){
             $resource = new AuthorResource($author);
