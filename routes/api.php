@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\AnimeController;
 use App\Http\Controllers\AuthorController;
-
+use App\Http\Controllers\CategoryController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -30,3 +30,8 @@ Route::get('/authors', [AuthorController::class, 'index']);
 Route::post('/authors', [AuthorController::class, 'store']);
 Route::put('/authors/{id}', [AuthorController::class, 'update']);
 Route::delete('/authors/{id}', [AuthorController::class, 'destroy']);
+
+Route::get('/categories', [CategoryController::class, 'index']);
+Route::post('/categories', [CategoryController::class, 'store']);
+Route::put('/categories/{id}', [CategoryController::class, 'update']);
+Route::delete('/categories/{id}', [CategoryController::class, 'destroy']);
