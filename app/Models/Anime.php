@@ -13,7 +13,6 @@ class Anime extends Model
 
     protected $fillable = [
         'title',
-        'id',
         'number_of_episodes',
         'state',
     ];
@@ -23,6 +22,6 @@ class Anime extends Model
     }
 
     public function author(){
-        return $this->belongsToMany();
+        return $this->belongsToMany(Author::class);
     }
 }
