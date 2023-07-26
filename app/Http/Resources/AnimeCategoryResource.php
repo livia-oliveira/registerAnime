@@ -16,8 +16,8 @@ class AnimeCategoryResource extends JsonResource
     {
         return [
             'id'=>$this->id,
-            'id_anime'=>$this->id_anime,
-            'id_category'=>$this->id_category,
+            'anime_id'=>$this->anime_id,
+            'category_id'=>$this->category_id,
         ];
     }
 }

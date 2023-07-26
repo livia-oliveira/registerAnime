@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AnimeController;
 use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\AnimeCategoryController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -35,3 +36,8 @@ Route::get('/categories', [CategoryController::class, 'index']);
 Route::post('/categories', [CategoryController::class, 'store']);
 Route::put('/categories/{id}', [CategoryController::class, 'update']);
 Route::delete('/categories/{id}', [CategoryController::class, 'destroy']);
+
+Route::get('/animecategories', [AnimeCategoryController::class, 'index']);
+Route::post('/animecategories', [AnimeCategoryController::class, 'store']);
+Route::put('/animecategories/{id}', [AnimeCategoryController::class, 'update']);
+Route::delete('/animecategories/{id}', [AnimeCategoryController::class, 'destroy']);

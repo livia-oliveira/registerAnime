@@ -11,7 +11,7 @@ class AnimeCategoryRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,8 +22,8 @@ class AnimeCategoryRequest extends FormRequest
     public function rules(): array
     {
         return [
-           'id_anime' => 'required',
-           'id_category' => 'required',
+           'anime_id' => 'required',
+           'category_id' => 'required',
         ];
     }
 }
