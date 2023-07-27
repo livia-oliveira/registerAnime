@@ -21,6 +21,7 @@ return new class extends Migration
             ->constrained('authors')
             ->onDelete('CASCADE')
             ->onUpdate('CASCADE');
+            $table->timestamps();
         });
     }
 

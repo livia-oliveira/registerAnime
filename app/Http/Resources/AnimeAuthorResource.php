@@ -16,8 +16,8 @@ class AnimeAuthorResource extends JsonResource
     {
         return [
             'id'=>$this->id,
-            'id_anime'=>$this->id_anime,
-            'id_author'=>$this->id_author,
+            'anime_id'=>$this->anime_id,
+            'author_id'=>$this->author_id,
         ];
     }
 }

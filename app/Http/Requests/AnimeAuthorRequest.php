@@ -11,7 +11,7 @@ class AnimeAuthorRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,8 +22,8 @@ class AnimeAuthorRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'id_anime' => 'required',
-            'id_author' => 'required',
+            'anime_id' => 'required',
+            'author_id' => 'required',
         ];
     }
 }
