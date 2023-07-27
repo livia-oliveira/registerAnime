@@ -7,6 +7,8 @@ use App\Http\Controllers\AnimeController;
 use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\AnimeCategoryController;
+use App\Http\Controllers\AnimeAuthorController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -41,3 +43,9 @@ Route::get('/animecategories', [AnimeCategoryController::class, 'index']);
 Route::post('/animecategories', [AnimeCategoryController::class, 'store']);
 Route::put('/animecategories/{id}', [AnimeCategoryController::class, 'update']);
 Route::delete('/animecategories/{id}', [AnimeCategoryController::class, 'destroy']);
+
+
+Route::get('/animeauthors', [AnimeAuthorController::class, 'index']);
+Route::post('/animeauthors', [AnimeAuthorController::class, 'store']);
+Route::put('/animeauthors/{id}', [AnimeAuthorController::class, 'update']);
+Route::delete('/animeauthors/{id}', [AnimeAuthorController::class, 'destroy']);
