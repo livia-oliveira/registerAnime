@@ -11,14 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('anime_author', function (Blueprint $table) {
+        Schema::create('anime_authors', function (Blueprint $table) {
             $table->id();
             $table->foreignId('anime_id')
-            ->constrained()
+            ->constrained('animes')
             ->onDelete('CASCADE')
             ->onUpdate('CASCADE');
             $table->foreignId('author_id')
-            ->constrained()
+            ->constrained('authors')
             ->onDelete('CASCADE')
             ->onUpdate('CASCADE');
         });
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('anime_author');
+        Schema::dropIfExists('anime_authors');
     }
 };
