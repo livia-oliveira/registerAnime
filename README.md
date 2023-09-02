@@ -1,1 +1,1 @@
-﻿# registerAnimeiuahdaoidhoiadoi
+﻿# registerAnime
